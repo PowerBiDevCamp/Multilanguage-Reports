@@ -1,0 +1,40 @@
+{
+  "suppressDefaultTitle": true,
+  "dataRoles": [
+    {
+      "displayName": "Localized Label",
+      "name": "localizedLabel",
+      "kind": "GroupingOrMeasure"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [{ "localizedLabel": { "min": 1, "max": 1 } }],
+      "single": { "role": "localizedLabel" }
+    }
+  ],
+  "objects": {
+    "localizedLabelProperties": {
+      "displayName": "Label Properties",
+      "properties": {
+        "fontSize": { "displayName": "Font Size", "type": { "integer": true } },
+        "fontBold": { "displayName": "Font Bold","type": { "bool": true }},
+        "fontColor": { "displayName": "Font Color","type": { "fill": { "solid": { "color": true } } } },
+        "backgroundColor": { "displayName": "Background Color", "type": { "fill": { "solid": { "color": true } } }},
+        "borderColor": { "displayName": "Border Color", "type": { "fill": { "solid": { "color": true } } }},
+        "borderWidth": { "displayName": "Border Width", "type": { "integer": true } },
+        "borderRadius": { "displayName": "Border Radius", "type": { "integer": true } },
+        "padding": { "displayName": "Horizontal Padding", "type": { "integer": true } },
+        "alignment": { "displayName": "Horizontal Alignment",               
+          "type": {
+            "enumeration": [
+              { "displayName": "Left", "value": "start" },
+              { "displayName": "Center", "value": "middle" },
+              { "displayName": "Right", "value": "end" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

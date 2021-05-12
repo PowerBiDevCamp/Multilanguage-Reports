@@ -1,0 +1,45 @@
+﻿Object Type,Object Name, English [en-US], Spanish [es-ES], French [fr-FR], German [de-DE], Hebrew [he-IL], Russian [ru-RU], Japanese [ja-JP], Chinese [zh-CN], Dutch [nl-NL]
+Table,Countries,Countries, Países, pays, Länder, מדינות, Стран, 国々, 国家, Landen
+Column,Countries[Continent],Continent, continente, continent, Kontinent, יבשת, континент, 大陸, 大陆, werelddeel
+Column,Countries[Country],Country, país, pays, Land, מדינה, страна, 国, 国家, land
+Column,Countries[Population],Population, población, population, Bevölkerung, אוכלוסייה, население, 人口, 人口, bevolking
+Column,Countries[Size],Size, tamaño, taille, Größe, גודל, размер, 大きさ, 大小, grootte
+Column,Countries[Median Age],Median Age, Edad media, Âge médian, Durchschnittsalter, גיל חציוני, Средний возраст, 中央値年齢, 中位年龄, Mediane leeftijd
+Column,Countries[Urban Population %],Urban Population %, Población urbana %, Population urbaine %, Städtische Bevölkerung %, אחוז אוכלוסייה עירונית, Городское население %, 都市人口 %, 城市人口%, Stedelijke bevolking %
+Column,Countries[Urban Population],Urban Population, población urbana, population urbaine, Städtische Bevölkerung, אוכלוסייה עירונית, Городское население, 都市人口, 城市人口, Stedelijke bevolking
+Column,Countries[Non-Urban Population],Non-Urban Population, Población no urbana, Population non urbaine, Nicht-städtische Bevölkerung, אוכלוסייה לא עירונית, Не городское население, 非都市人口, 非城市人口, Niet-stedelijke bevolking
+Column,Countries[Population Density],Population Density, densidad de población, densité de population, Bevölkerungsdichte, צפיפות אוכלוסין, плотность населения, 人口密度, 人口密度, bevolkingsdichtheid
+Column,Countries[Country Code],Country Code, Código de país, Code pays, Ländercode, קידומת מדינה, Код страны, 国コード, 国家代码, Landcode
+Column,Countries[Flag],Flag, bandera, drapeau, Flag, דגל, флаг, 旗, 旗, vlag
+Measure,Countries[Country Name],Country Name, Nombre del país, Nom du pays, Ländername, שם מדינה, Название страны, 国名, 国家名称, Landnaam
+Table,GNP,GNP, producto nacional bruto, PNB, Bsp, GNP (לא כולל), ВНП, GNP, 国民生产总值, BNP
+Column,GNP[Country],Country, país, pays, Land, מדינה, страна, 国, 国家, land
+Column,GNP[Year],Year, año, année, Jahr, שנה, год, 年, 年, jaar
+Column,GNP[GNP],GNP, producto nacional bruto, PNB, Bsp, GNP (לא כולל), ВНП, GNP, 国民生产总值, BNP
+Measure,GNP[Total GNP],Total GNP, PNL total, PNB total, BSP insgesamt," סה""כ GNP", Всего ВНП, 総GNP, 国民生产总值总额, Totaal BNP
+Measure,Localized Labels[Population by Country],Population by Country, Población por país, Population par pays, Bevölkerung nach Staat, אוכלוסייה לפי מדינה, Население по стране, 国別人口, 按国家/地区分的人口, Bevolking per land
+Measure,Localized Labels[Land Size by Country],Land Size by Country, Tamaño de la tierra por país, Superficie des terres par pays, Landgröße nach Land, גודל קרקע לפי מדינה, Размер земли по стране, 国別の土地サイズ, 按国家/地区分的土地大小, Landgrootte per land
+Measure,Localized Labels[Gross Domestic Product (2014-2018)],Gross Domestic Product (2014-2018), Producto Interno Bruto (2014-2018), Produit intérieur brut (2014-2018), Bruttoinlandsprodukt (2014-2018), תוצר מקומי גולמי (2014-2018), Валовой внутренний продукт (2014-2018), 国内総生産(2014-2018), 国内生产总值（2014-2018年）, Bruto Binnenlands Product (2014-2018)
+Measure,Localized Labels[Median Age by Country],Median Age by Country, Mediana de edad por país, Âge médian par pays, Medianalter nach Land, גיל חציוני לפי מדינה, Средний возраст по стране, 国別の年齢の中央値, 按国家/地区分的中位年龄, Mediane leeftijd per land
+Measure,Localized Labels[Percentage of Urban Population],Percentage of Urban Population, Porcentaje de población urbana, Pourcentage de la population urbaine, Prozentualer Anteil der städtischen Bevölkerung, אחוז האוכלוסייה העירונית, Процент городского населения, 都市人口の割合, 城市人口百分比, Percentage stedelijke bevolking
+Measure,Localized Labels[Country Statistics],Country Statistics, Estadísticas del país, Statistiques nationales, Länderstatistik, סטטיסטיקת מדינה, Страновая статистика, 国別統計, 国家统计, Landenstatistieken
+Measure,Localized Labels[Population Density by Country],Population Density by Country, Densidad de población por país, Densité de population par pays, Bevölkerungsdichte nach Ländern, צפיפות אוכלוסין לפי מדינה, Плотность населения по стране, 国別人口密度, 人口密度（按国家/地区）, Bevolkingsdichtheid per land
+Measure,Localized Labels[Population],Population, población, population, Bevölkerung, אוכלוסייה, население, 人口, 人口, bevolking
+Measure,Localized Labels[Land Size],Land Size, Tamaño de la tierra, Taille du terrain, Grundstücksgröße, גודל קרקע, Размер земли, 土地のサイズ, 土地面积, Grootte van het land
+Measure,Localized Labels[Grosss Domestic Product],Grosss Domestic Product, Producto interno bruto, Produit intérieur brut, Bruttoinlandsprodukt, תוצר מקומי גולמי, Валовой внутренний продукт, 国内総生産, 国内生产总值, Bruto binnenlands product
+Measure,Localized Labels[Median Age],Median Age, Edad media, Âge médian, Durchschnittsalter, גיל חציוני, Средний возраст, 中央値年齢, 中位年龄, Mediane leeftijd
+Measure,Localized Labels[Population Density],Population Density, densidad de población, densité de population, Bevölkerungsdichte, צפיפות אוכלוסין, плотность населения, 人口密度, 人口密度, bevolkingsdichtheid
+Measure,Localized Labels[Urban Population],Urban Population, población urbana, population urbaine, Städtische Bevölkerung, אוכלוסייה עירונית, Городское население, 都市人口, 城市人口, Stedelijke bevolking
+Measure,Localized Labels[Zoom],Zoom, zoom, zoom, Zoom, זום, увеличить, ズーム, 缩放, zoom
+Measure,Localized Labels[No Zoom],No Zoom, Sin zoom, Pas de zoom, Kein Zoom, ללא שינוי גודל תצוגה, Нет Увеличить, ズームなし, 无缩放, Geen zoom
+Measure,Localized Labels[Current Culture],Current Culture, Cultura actual, Culture actuelle, Aktuelle Kultur, תרבות נוכחית, Текущая культура, 現在の文化, 当前文化, Huidige cultuur
+Measure,Localized Labels[North America],North America, América del Norte, Amérique du Nord, Nordamerika, צפון אמריקה, Северная Америка, 北アメリカ, 北美洲, Noord-Amerika
+Measure,Localized Labels[South America],South America, América del Sur, Amérique du Sud, Südamerika, דרום אמריקה, Южная Америка, 南アメリカ, 南美洲, Zuid-Amerika
+Measure,Localized Labels[Europe],Europe, Europa, Europe, Europa, אירופה, Европа, ヨーロッパ, 欧洲, Europa
+Measure,Localized Labels[Africa],Africa, África, Afrique, Afrika, אפריקה, Африка, アフリカ, 非洲, Afrika
+Measure,Localized Labels[Asia],Asia, Asia, Asie, Asien, אסיה, Азия, アジア, 亚洲, Azië
+Measure,Localized Labels[Oceania],Oceania, Oceanía, Océanie, Ozeanien, אוקיאניה, Океания, オセアニア, 大洋洲, Oceanië
+Measure,Localized Labels[Show All Continents],Show All Continents, Mostrar todos los continentes, Afficher tous les continents, Alle Kontinente anzeigen, הצג את כל היבשות, Показать все континенты, すべての大陸を表示, 显示所有大陆, Toon alle continenten
+Measure,Localized Labels[Map],Map, mapa, carte, Karte, מפה, карта, 地図, 地图, kaart
+Measure,Localized Labels[Countries by Geography],Countries by Geography, Países por Geografía, Pays par géographie, Länder nach Geographie, מדינות לפי גיאוגרפיה, Страны по географии, 国(地理学別), 按地理分项的国家/地区, Landen naar geografie
+Measure,Localized Labels[Filter by Continent],Filter by Continent, Filtrar por continente, Filtre par continent, Filter nach Kontinent, סנן לפי יבשת, Фильтр по континентам, 大陸でフィルタ, 按大陆过滤, Filteren op continent
