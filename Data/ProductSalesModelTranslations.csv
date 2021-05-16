@@ -1,0 +1,35 @@
+﻿Object Type,Object Name, en-US, es-ES, fr-FR, de-DE, nl-NL
+Table,Customers,Customers, clientela, clientèle, Kunden, Klanten
+Column,Customers[Country],Country, país, pays, Land, land
+Column,Customers[City Name],City Name, Nombre de la ciudad, Nom de la ville, Stadtname, Plaatsnaam
+Column,Customers[Birth Date],Birth Date, Fecha de nacimiento, date de naissance, Geburtsdatum, geboortedatum
+Column,Customers[Customer],Customer, cliente, client, Kunde, klant
+Column,Customers[City],City, ciudad, ville, Stadt, stad
+Column,Customers[Flag],Flag, bandera, drapeau, Flag, vlag
+Column,Customers[Age],Age, edad, âge, Alter, leeftijd
+Table,Sales,Sales, ventas, ventes, Verkauf, verkoop
+Measure,Sales[Sales Revenue],Sales Revenue, Ingresos por ventas, Chiffre d’affaires, Umsatz, Omzet
+Measure,Sales[Units Sold],Units Sold, Unidades vendidas, Unités vendues, Verkaufte Einheiten, Verkochte eenheden
+Measure,Sales[Customer Count],Customer Count, Recuento de clientes, Nombre de clients, Kundenanzahl, Aantal klanten
+Measure,Sales[Order Count],Order Count, Recuento de pedidos, Nombre d’ordres, Order Count, Aantal bestellingen
+Measure,Sales[Product Rank],Product Rank, Rango de productos, Classement du produit, Produktrang, Productrangschikking
+Measure,Sales[Customer Rank],Customer Rank, Rango de clientes, Classement des clients, Kundenrang, Rangschikking van de klant
+Table,Products,Products, productos, Produits, Produkte, Producten
+Column,Products[Product],Product, producto, produit, Produkt, product
+Column,Products[Category],Category, categoría, catégorie, Kategorie, categorie
+Column,Products[List Price],List Price, Precio de lista, Prix de liste, Listenpreis, Catalogusprijs
+Column,Products[Image],Image, imagen, image, Bild, beeld
+Table,Calendar,Calendar, calendario, calendrier, Kalender, kalender
+Column,Calendar[Date],Date, fecha, date, Datum, datum
+Column,Calendar[Year],Year, año, année, Jahr, jaar
+Column,Calendar[Quarter],Quarter, cuarto, quartier, Quartal, wijk
+Column,Calendar[Month],Month, mes, mois, Monat, maand
+Measure,Localized Labels[Sales by Product],Sales by Product, Ventas por producto, Ventes par produit, Verkauf nach Produkt, Verkoop per product
+Measure,Localized Labels[Home],Home, hogar, domicile, Startseite, thuis
+Measure,Localized Labels[Sales by Country],Sales by Country, Ventas por país, Ventes par pays, Verkauf nach Ländern, Verkoop per land
+Measure,Localized Labels[European Sales Report],European Sales Report, Informe europeo de ventas, Rapport sur les ventes en Europe, Europäischer Verkaufsbericht, Europees verkooprapport
+Measure,Localized Labels[Top 5 Products],Top 5 Products, Los 5 mejores productos, Top 5 des produits, Top 5 Produkte, Top 5 Producten
+Measure,Localized Labels[Filter by Country],Filter by Country, Filtrar por país, Filtre par pays, Filter nach Land, Filteren op land
+Measure,Localized Labels[Top 10 Customers],Top 10 Customers, Los 10 mejores clientes, Top 10 des clients, Top 10 Kunden, Top 10 klanten
+Measure,Localized Labels[Drilldown by Product],Drilldown by Product, Ejercicio por producto, Forer par produit, Drilldown nach Produkt, Drilldown per product
+Measure,Localized Labels[Drilldown by City],Drilldown by City, Simulacro por ciudad, Forer par ville, Drilldown nach Stadt, Drilldown per stad
