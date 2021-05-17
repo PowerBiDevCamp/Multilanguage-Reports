@@ -10,7 +10,9 @@ namespace TranslationsBuilder {
 
     // fill in these app settings with the correct values for your environment
     public const string AZURE_TRANSLATOR_SERVICE_KEY = "";
-    public const string AZURE_TRANSLATOR_SERVICE_LOCATION = "";
+    public const string AZURE_TRANSLATOR_SERVICE_LOCATION = "eastus2";
+
+    public static string connectString = "localhost:50000";
 
   }
 

@@ -13,8 +13,7 @@ namespace TranslationsBuilder.Services {
     static Model model;
 
     static TranslationsManager() {
-      string connectString = "localhost:50533";
-      server.Connect(connectString);
+      server.Connect(AppSettings.connectString);
       model = server.Databases[0].Model;
     }
 
@@ -118,9 +117,9 @@ namespace TranslationsBuilder.Services {
 
       // set csv file headers
       string csv = $"Object Type,Object Name";
-      csv += ", " + translationSet.DefaultLangauge.DisplayLabel;
+      csv += ", " + translationSet.DefaultLangauge.LanguageTag;
       foreach (var language in translationSet.SecondaryLanguages) {
-        csv += ", " + language.DisplayLabel;
+        csv += ", " + language.LanguageTag;
       }
       csv += "\n";
 
@@ -174,7 +173,7 @@ namespace TranslationsBuilder.Services {
 
       }
 
-      string filePath = System.IO.Directory.GetCurrentDirectory() + @"\ModelTranslations.csv";
+      string filePath = System.Reflection.Assembly.GetExecutingAssembly().Location + @"DataModelTranslations.csv";
       StreamWriter writer = new StreamWriter(File.Open(filePath, FileMode.Create), Encoding.UTF8);
       writer.Write(csv);
       writer.Flush();
