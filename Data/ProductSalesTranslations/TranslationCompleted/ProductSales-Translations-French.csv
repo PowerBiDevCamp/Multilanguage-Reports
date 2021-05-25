@@ -1,0 +1,42 @@
+﻿Object Type,Object Name,en-US,fr-FR
+Table,Customers,Customers,Clientèle
+Column,Customers[City Name],City Name,Nom de la ville
+Column,Customers[Birth Date],Birth Date,Date de naissance
+Column,Customers[Customer],Customer,Client
+Column,Customers[City],City,Ville
+Column,Customers[Age],Age,Age
+Column,Customers[Flag],Flag,Drapeau
+Table,Sales,Sales,Ventes
+Measure,Sales[Sales Revenue],Sales Revenue,Chiffre d’affaires
+Measure,Sales[Units Sold],Units Sold,Unités vendues
+Measure,Sales[Customer Count],Customer Count,Nombre de clients
+Measure,Sales[Order Count],Order Count,Nombre d’ordres
+Measure,Sales[Product Rank],Product Rank,Classement du produit
+Measure,Sales[Customer Rank],Customer Rank,Classement des clients
+Table,Calendar,Calendar,Calendrier
+Column,Calendar[Date],Date,Date
+Column,Calendar[Year],Year,Année
+Column,Calendar[Quarter],Quarter,Quartier
+Column,Calendar[Month],Month,Mois
+Measure,Localized Labels[Sales by Product],Sales by Product,Ventes par produit
+Measure,Localized Labels[Home],Home,Domicile
+Measure,Localized Labels[Sales by Country],Sales by Country,Ventes par pays
+Measure,Localized Labels[European Sales Report],European Sales Report,Rapport sur les ventes en Europe
+Measure,Localized Labels[Top 5 Products],Top 5 Products,Top 5 des produits
+Measure,Localized Labels[Filter by Country],Filter by Country,Filtre par pays
+Measure,Localized Labels[Top 10 Customers],Top 10 Customers,Top 10 des clients
+Measure,Localized Labels[Sales by Category],Sales by Category,Ventes par catégorie
+Measure,Localized Labels[Sales by City],Sales by City,Ventes par ville
+Measure,Localized Labels[Power BI],Power BI,Puissance BI
+Measure,Localized Labels[Dev Camp],Dev Camp,Dev Camp
+Measure,Localized Labels[Set Country Filter],Set Country Filter,Définir le filtre de pays
+Measure,Localized Labels[Set Product Filter],Set Product Filter,Définir le filtre produit
+Measure,Localized Labels[User Culture],User Culture,Culture utilisateur
+Table,Products,Products,Produits
+Column,Products[Product],Product,Produit
+Column,Products[Category],Category,Catégorie
+Column,Products[Price],Price,Prix
+Column,Products[Image],Image,Image
+Table,Countries,Countries,Pays
+Column,Countries[Country],Country,Pays
+Column,Countries[Flag],Flag,Drapeau
