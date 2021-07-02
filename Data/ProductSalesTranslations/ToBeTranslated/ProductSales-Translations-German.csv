@@ -5,12 +5,12 @@ Column,Customers[Birth Date],Birth Date,Geburtsdatum
 Column,Customers[Customer],Customer,Kunde
 Column,Customers[City],City,Stadt
 Column,Customers[Age],Age,Alter
-Column,Customers[Flag],Flag,Flag
+Column,Customers[Flag],Flag,Markierung
 Table,Sales,Sales,Verkauf
 Measure,Sales[Sales Revenue],Sales Revenue,Umsatz
 Measure,Sales[Units Sold],Units Sold,Verkaufte Einheiten
 Measure,Sales[Customer Count],Customer Count,Kundenanzahl
-Measure,Sales[Order Count],Order Count,Order Count
+Measure,Sales[Order Count],Order Count,Auftragsvolumen
 Measure,Sales[Product Rank],Product Rank,Produktrang
 Measure,Sales[Customer Rank],Customer Rank,Kundenrang
 Table,Calendar,Calendar,Kalender
@@ -18,25 +18,27 @@ Column,Calendar[Date],Date,Datum
 Column,Calendar[Year],Year,Jahr
 Column,Calendar[Quarter],Quarter,Quartal
 Column,Calendar[Month],Month,Monat
-Measure,Localized Labels[Sales by Product],Sales by Product,Verkauf nach Produkt
+Measure,Localized Labels[Sales by Product],Sales by Product,Verkauf pro Produkt
 Measure,Localized Labels[Home],Home,Startseite
-Measure,Localized Labels[Sales by Country],Sales by Country,Verkauf nach Ländern
+Measure,Localized Labels[Sales by Country],Sales by Country,Verkauf pro Land
 Measure,Localized Labels[European Sales Report],European Sales Report,Europäischer Verkaufsbericht
 Measure,Localized Labels[Top 5 Products],Top 5 Products,Top 5 Produkte
-Measure,Localized Labels[Filter by Country],Filter by Country,Filter nach Land
+Measure,Localized Labels[Filter by Country],Filter by Country,Filter pro Land
 Measure,Localized Labels[Top 10 Customers],Top 10 Customers,Top 10 Kunden
-Measure,Localized Labels[Sales by Category],Sales by Category,Umsatz nach Kategorie
-Measure,Localized Labels[Sales by City],Sales by City,Verkauf nach Stadt
+Measure,Localized Labels[Sales by Category],Sales by Category,Umsatz pro Kategorie
+Measure,Localized Labels[Sales by City],Sales by City,Verkauf pro Stadt
 Measure,Localized Labels[Power BI],Power BI,Power BI
-Measure,Localized Labels[Dev Camp],Dev Camp,Dev Camp
+Measure,Localized Labels[Dev Camp],Dev Camp,Entwickler Camp
 Measure,Localized Labels[Set Country Filter],Set Country Filter,Festlegen des Länderfilters
-Measure,Localized Labels[Set Product Filter],Set Product Filter,Produktfilter festlegen
+Measure,Localized Labels[Set Product Filter],Set Product Filter,Festlegen des Produktfilters
 Measure,Localized Labels[User Culture],User Culture,Benutzerkultur
 Table,Products,Products,Produkte
+Column,Products[LanguageTag],LanguageTag,LanguageTag
 Column,Products[Product],Product,Produkt
 Column,Products[Category],Category,Kategorie
 Column,Products[Price],Price,Preis
 Column,Products[Image],Image,Bild
 Table,Countries,Countries,Länder
+Column,Countries[LanguageTag],LanguageTag,LanguageTag
 Column,Countries[Country],Country,Land
-Column,Countries[Flag],Flag,Flag
+Column,Countries[Flag],Flag,Markierung
