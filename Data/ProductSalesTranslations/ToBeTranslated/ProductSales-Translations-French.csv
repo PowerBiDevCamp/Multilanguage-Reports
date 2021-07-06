@@ -1,42 +1,35 @@
 ﻿Object Type,Object Name,en-US,fr-FR
-Table,Customers,Customers,clientèle
-Column,Customers[City Name],City Name,Nom de la ville
-Column,Customers[Birth Date],Birth Date,date de naissance
-Column,Customers[Customer],Customer,client
-Column,Customers[City],City,ville
-Column,Customers[Age],Age,âge
-Column,Customers[Flag],Flag,drapeau
-Table,Sales,Sales,ventes
-Measure,Sales[Sales Revenue],Sales Revenue,Chiffre d’affaires
-Measure,Sales[Units Sold],Units Sold,Unités vendues
-Measure,Sales[Customer Count],Customer Count,Nombre de clients
-Measure,Sales[Order Count],Order Count,Nombre d’ordres
-Measure,Sales[Product Rank],Product Rank,Classement du produit
-Measure,Sales[Customer Rank],Customer Rank,Classement des clients
-Table,Calendar,Calendar,calendrier
-Column,Calendar[Date],Date,date
-Column,Calendar[Year],Year,année
-Column,Calendar[Quarter],Quarter,quartier
-Column,Calendar[Month],Month,mois
-Measure,Localized Labels[Sales by Product],Sales by Product,Ventes par produit
-Measure,Localized Labels[Home],Home,domicile
-Measure,Localized Labels[Sales by Country],Sales by Country,Ventes par pays
-Measure,Localized Labels[European Sales Report],European Sales Report,Rapport sur les ventes en Europe
-Measure,Localized Labels[Top 5 Products],Top 5 Products,Top 5 des produits
-Measure,Localized Labels[Filter by Country],Filter by Country,Filtre par pays
-Measure,Localized Labels[Top 10 Customers],Top 10 Customers,Top 10 des clients
-Measure,Localized Labels[Sales by Category],Sales by Category,Ventes par catégorie
-Measure,Localized Labels[Sales by City],Sales by City,Ventes par ville
-Measure,Localized Labels[Power BI],Power BI,Puissance BI
-Measure,Localized Labels[Dev Camp],Dev Camp,Dev Camp
-Measure,Localized Labels[Set Country Filter],Set Country Filter,Définir le filtre de pays
-Measure,Localized Labels[Set Product Filter],Set Product Filter,Définir le filtre produit
-Measure,Localized Labels[User Culture],User Culture,Culture utilisateur
-Table,Products,Products,Produits
-Column,Products[Product],Product,produit
-Column,Products[Category],Category,catégorie
-Column,Products[Price],Price,prix
-Column,Products[Image],Image,image
-Table,Countries,Countries,pays
-Column,Countries[Country],Country,pays
-Column,Countries[Flag],Flag,drapeau
+Table,Customers,Customers,
+Column,Customers[Country],Country,
+Column,Customers[City Name],City Name,
+Column,Customers[Birth Date],Birth Date,
+Column,Customers[Customer],Customer,
+Column,Customers[City],City,
+Column,Customers[Flag],Flag,
+Column,Customers[Age],Age,
+Table,Sales,Sales,
+Measure,Sales[Sales Revenue],Sales Revenue,
+Measure,Sales[Units Sold],Units Sold,
+Measure,Sales[Customer Count],Customer Count,
+Measure,Sales[Order Count],Order Count,
+Measure,Sales[Product Rank],Product Rank,
+Measure,Sales[Customer Rank],Customer Rank,
+Table,Products,Products,
+Column,Products[Product],Product,
+Column,Products[Category],Category,
+Column,Products[List Price],List Price,
+Column,Products[Image],Image,
+Table,Calendar,Calendar,
+Column,Calendar[Date],Date,
+Column,Calendar[Year],Year,
+Column,Calendar[Quarter],Quarter,
+Column,Calendar[Month],Month,
+Measure,Localized Labels[Sales by Product],Sales by Product,
+Measure,Localized Labels[Home],Home,
+Measure,Localized Labels[Sales by Country],Sales by Country,
+Measure,Localized Labels[European Sales Report],European Sales Report,
+Measure,Localized Labels[Top 5 Products],Top 5 Products,
+Measure,Localized Labels[Filter by Country],Filter by Country,
+Measure,Localized Labels[Top 10 Customers],Top 10 Customers,
+Measure,Localized Labels[Drilldown by Product],Drilldown by Product,
+Measure,Localized Labels[Drilldown by City],Drilldown by City,
