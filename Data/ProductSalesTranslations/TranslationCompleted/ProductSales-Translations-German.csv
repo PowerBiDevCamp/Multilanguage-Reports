@@ -33,10 +33,12 @@ Measure,Localized Labels[Set Country Filter],Set Country Filter,Festlegen des LÃ
 Measure,Localized Labels[Set Product Filter],Set Product Filter,Festlegen des Produktfilters
 Measure,Localized Labels[User Culture],User Culture,Benutzerkultur
 Table,Products,Products,Produkte
+Column,Products[LanguageTag],LanguageTag,LanguageTag
 Column,Products[Product],Product,Produkt
 Column,Products[Category],Category,Kategorie
 Column,Products[Price],Price,Preis
 Column,Products[Image],Image,Bild
 Table,Countries,Countries,LÃ¤nder
+Column,Countries[LanguageTag],LanguageTag,LanguageTag
 Column,Countries[Country],Country,Land
 Column,Countries[Flag],Flag,Markierung
