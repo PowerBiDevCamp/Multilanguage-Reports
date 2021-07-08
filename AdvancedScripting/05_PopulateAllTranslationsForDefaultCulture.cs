@@ -1,3 +1,4 @@
+
 foreach(Table table in Model.Tables) {     
     if(!table.IsHidden){
        // generate translation for table name
@@ -19,3 +20,5 @@ foreach(Table table in Model.Tables) {
        };
     }
 }
+
+
