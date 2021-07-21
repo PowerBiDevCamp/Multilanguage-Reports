@@ -21,11 +21,9 @@ namespace TranslationsBuilder {
     }
 
     private void onLoad(object sender, EventArgs e) {
-
       if (TranslationsManager.IsConnected) {
         LoadModel();
       }
-
     }
 
     public void LoadModel() {
@@ -110,12 +108,9 @@ namespace TranslationsBuilder {
 
         }
       }
-
-
     }
 
     private void GenenrateMachineTranslations(object sender, EventArgs e) {
-
       Language targetLanguage = SupportedLanguages.AllLangauges[listCultureToPopulate.SelectedItem.ToString()];
       string targetLanguageTag = targetLanguage.LanguageTag;
 
@@ -126,10 +121,7 @@ namespace TranslationsBuilder {
         dialog.Close();
       }
 
-
       PopulateGridWithTranslations();
-
-
     }
 
     private void ExportTranslations(object sender, EventArgs e) {
@@ -144,7 +136,6 @@ namespace TranslationsBuilder {
       dialogOpenFile.RestoreDirectory = true;
 
       if (dialogOpenFile.ShowDialog() == DialogResult.OK) {
-
         FileStream stream = File.Open(dialogOpenFile.FileName,FileMode.Open, FileAccess.Read);
         StreamReader reader = new StreamReader(stream);        
         var lines = reader.ReadToEnd().Trim().Split("\r\n");
@@ -158,13 +149,11 @@ namespace TranslationsBuilder {
           string translatedValue = rowValues[3];
           TranslationsManager.SetDatasetObjectTranslation(objectType, objectName, targetLanguage, translatedValue);
         }
-
         PopulateGridWithTranslations();
       }
     }
 
     private void ExportTranslationsSheet(object sender, EventArgs e) {
-
       Language targetLanguage = SupportedLanguages.AllLangauges[listLanguageForTransation.SelectedItem.ToString()];
       string targetLanguageTag = targetLanguage.LanguageTag;
 
@@ -174,19 +163,16 @@ namespace TranslationsBuilder {
         TranslationsManager.ExportTranslationsSheet(targetLanguageTag);
         dialog.Close();
       }
-
       PopulateGridWithTranslations();
     }
 
     private void ConfigureSettings(object sender, EventArgs e) {
-
       using (FormConfig dialog = new FormConfig()) {
         dialog.StartPosition = FormStartPosition.CenterParent;
         dialog.ShowDialog(this);
         if (dialog.DialogResult == DialogResult.OK) {
           SetGenenrateMachineTranslationsButton();
         }
-
       }
     }
 
@@ -197,12 +183,9 @@ namespace TranslationsBuilder {
       else {
         grpMachineTranslations.Visible = false;
       }
-
-
     }
 
     private void SetDatasetName(object sender, EventArgs e) {
-
       using (FormSetDatasetName dialog = new FormSetDatasetName()) {
         dialog.StartPosition = FormStartPosition.CenterParent;
         dialog.DatasetName = TranslationsManager.DatasetName;
@@ -211,10 +194,7 @@ namespace TranslationsBuilder {
           TranslationsManager.DatasetName = dialog.DatasetName;
           txtDataset.Text = dialog.DatasetName;
         }
-
       }
-
-
     }
   }
 }

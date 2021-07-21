@@ -48,17 +48,11 @@ namespace TranslationsBuilder.Services {
     }
 
     public static List<string> GetTables() {
-
       var tables = new List<string>();
-
       //*** enumerate through tables
-
-      var table1 = model.Tables["xxxx"];
-
       foreach (Table table in model.Tables) {
         tables.Add(table.Name);
       }
-
       return tables;
     }
 
@@ -181,7 +175,7 @@ namespace TranslationsBuilder.Services {
       model.SaveChanges();
     }
 
-    public static void PopulateCultureWithMachineTranslations2(string CultureName, IStatusCalback StatusCalback = null) {
+    public static void PopulateCultureWithMachineTranslations(string CultureName, IStatusCalback StatusCalback = null) {
 
       // add culture to data model if it doesn't already exist
       if (!model.Cultures.ContainsName(CultureName)) {
