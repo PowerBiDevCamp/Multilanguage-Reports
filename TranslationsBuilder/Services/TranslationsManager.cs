@@ -313,14 +313,15 @@ namespace TranslationsBuilder.Services {
       }
 
       DirectoryInfo path = Directory.CreateDirectory(AppSettings.TranslationsOutboxFolderPath);
-      string filePath = path + @"\" + DatasetName + "-Translations.csv";
+      string filePath = path + @"/" + DatasetName + "-Translations.csv";
       StreamWriter writer = new StreamWriter(File.Open(filePath, FileMode.Create), Encoding.UTF8);
       writer.Write(csv);
       writer.Flush();
       writer.Dispose();
 
       if (true) {
-        ExcelUtilities.OpenCsvInExcel(filePath);
+        string excelFilePath = @"""" + filePath + @"""";
+        ExcelUtilities.OpenCsvInExcel(excelFilePath);
       }
 
     }
@@ -387,14 +388,15 @@ namespace TranslationsBuilder.Services {
       string languageName = SupportedLanguages.AllLangauges[CultureName].DisplayName;
 
       string folderPath = (Directory.CreateDirectory(AppSettings.TranslationsOutboxFolderPath)).FullName;
-      string filePath = folderPath + @"/" + DatasetName + "-Translations-" + languageName + ".csv";
+      string filePath = folderPath + @"\" + DatasetName + "-Translations-" + languageName + ".csv";
       StreamWriter writer = new StreamWriter(File.Open(filePath, FileMode.Create), Encoding.UTF8);
       writer.Write(csv);
       writer.Flush();
       writer.Dispose();
 
       if (true) {
-        ExcelUtilities.OpenCsvInExcel(filePath);
+        string excelFilePath = @"""" + filePath + @"""";
+        ExcelUtilities.OpenCsvInExcel(excelFilePath);
       }
 
     }
@@ -539,6 +541,7 @@ namespace TranslationsBuilder.Services {
       }
       catch (ArgumentException ex) {
         // ignore error if target does not exist
+        Console.WriteLine(ex.Message);
       }
     }
 

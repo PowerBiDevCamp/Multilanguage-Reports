@@ -470,7 +470,6 @@ namespace TranslationsBuilder {
 
     #endregion
     private System.Windows.Forms.DataGridView gridTranslations;
-    private CheckBox check;
     private OpenFileDialog dialogOpenFile;
     private GroupBox groupDefaultCulture;
     private Button btnPopulateDefaultCultureTranslations;
