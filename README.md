@@ -1,5 +1,5 @@
 # Building Multi-language Reports in Power BI
-This repository contains demo files and documentation for the *ProductSales.pbix* developer sample which demonstrates how to build a multi-language report for Power BI which supports English, Spanish, French, German and Dutch.
+This repository contains demo files and documentation for the **ProductSales.pbix** developer sample which demonstrates how to build a multi-language report for Power BI which supports English, Spanish, French, German and Dutch.
 
 You can see the [live demo](https://multilanguagereportdemo.azurewebsites.net) to see a multi-language report in action.
 
