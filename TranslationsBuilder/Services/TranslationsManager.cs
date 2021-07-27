@@ -247,7 +247,6 @@ namespace TranslationsBuilder.Services {
       }
 
 
-
       if (!string.IsNullOrEmpty(hierarchy.Description)) {
         List<string> descriptionRowValues = new List<string> { "Hierarchy", "Description", $"{table.Name}[{hierarchy.Name}]", defaultCulture.ObjectTranslations[hierarchy, TranslatedProperty.Description]?.Value };
         foreach (var language in translationSet.SecondaryLanguages) {
