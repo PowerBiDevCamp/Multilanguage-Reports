@@ -76,8 +76,6 @@ namespace TranslationsBuilder.Services {
         }
       }
 
-
-
       int secondaryLanguageCount = translationSet.SecondaryLanguages.Count;
       int columnCount = 4 + secondaryLanguageCount;
 
@@ -556,8 +554,6 @@ namespace TranslationsBuilder.Services {
     }
 
     public static void SetDatasetObjectTranslation(string TablularObjectType, string TranslatedPropertyName, string ObjectName, string TargetLanguage, string TranslatedValue) {
-      //try {
-
       var targetObject = TranslationsManager.GetMetadataObject(TablularObjectType, ObjectName);
 
       switch (TranslatedPropertyName) {
@@ -578,11 +574,6 @@ namespace TranslationsBuilder.Services {
 
       model.SaveChanges();
 
-     // }
-     //  catch (ArgumentException ex) {
-     // ignore error if target does not exist
-     //  Console.WriteLine(ex.Message);
-     // }
     }
 
     public static void ImportTranslations(string filePath) {
@@ -627,7 +618,6 @@ namespace TranslationsBuilder.Services {
       // close file and release resources
       reader.Close();
       stream.Close();
-
     }
 
   }
