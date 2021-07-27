@@ -369,7 +369,7 @@ namespace TranslationsBuilder.Services {
         culture.ObjectTranslations.SetTranslation(table, TranslatedProperty.Caption, translatedTableName);
         UpdateStatus(StatusCalback, CultureName, table.Name, table.Name, translatedTableName);
 
-        // set Description translation for column
+        // set Description translation for table
         if (!string.IsNullOrEmpty(table.Description)) {
           var translatedTableDescription = TranslateContent(table.Description, CultureName);
           culture.ObjectTranslations.SetTranslation(table, TranslatedProperty.Description, translatedTableDescription);
