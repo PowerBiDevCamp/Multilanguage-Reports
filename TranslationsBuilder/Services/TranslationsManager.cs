@@ -97,7 +97,6 @@ namespace TranslationsBuilder.Services {
       List<string[]> Rows = new List<string[]>();
 
       foreach (Table table in model.Tables) {
-
         // exclude hidden tables
         if (!table.IsHidden) {
           // do not include 'Localized Labels' table name for translation
@@ -124,9 +123,7 @@ namespace TranslationsBuilder.Services {
           }
 
         }
-
       }
-
       return new TranslationsTable {
         Headers = Headers,
         Rows = Rows
@@ -138,7 +135,7 @@ namespace TranslationsBuilder.Services {
 
       List<string[]> rows = new List<string[]>();
 
-      // always add row for caption
+      // add row for caption
       List<string> captionRowValues = new List<string> {
         "Table",
         "Caption",
@@ -149,7 +146,6 @@ namespace TranslationsBuilder.Services {
         captionRowValues.Add(model.Cultures[language.LanguageTag].ObjectTranslations[table, TranslatedProperty.Caption]?.Value);
       }
       rows.Add(captionRowValues.ToArray());
-
 
       if (!string.IsNullOrEmpty(table.Description)) {
         List<string> descriptionRowValues = new List<string> { "Table", "Description", table.Name, defaultCulture.ObjectTranslations[table, TranslatedProperty.Description]?.Value };
