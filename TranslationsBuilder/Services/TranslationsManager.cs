@@ -92,7 +92,6 @@ namespace TranslationsBuilder.Services {
         index += 1;
       }
 
-      var cu = model.Cultures;
       var defaultCulture = model.Cultures[model.Culture];
       List<string[]> Rows = new List<string[]>();
 
