@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net.Http;
 using System.Text;
 using Newtonsoft.Json;
@@ -63,7 +64,9 @@ namespace TranslationsBuilder.Services {
     public static string TranslateContent(string textToTranslate, string language) {
       string[] languages = { language };
       var translationsResult = GetMachineTranslations(textToTranslate, languages);
-      return translationsResult[0].text;
+      CultureInfo cultureInfo = new CultureInfo(language);
+      return cultureInfo.TextInfo.ToTitleCase(translationsResult[0].text);
+
     }
 
   }

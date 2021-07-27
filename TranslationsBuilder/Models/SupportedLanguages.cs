@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace TranslationsBuilder.Models {
@@ -104,6 +105,10 @@ namespace TranslationsBuilder.Models {
              { Japanese.LanguageTag, Japanese },
              { Chinese.LanguageTag, Chinese }
     };
+
+    static public Language GetLanguageFromFullName(string FullName) {
+      return AllLangauges.First(languageEntry => languageEntry.Value.FullName == FullName).Value;
+    }
 
   }
 }

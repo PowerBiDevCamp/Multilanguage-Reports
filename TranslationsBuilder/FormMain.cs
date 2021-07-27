@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using TranslationsBuilder.Models;
 using TranslationsBuilder.Services;
@@ -21,6 +22,7 @@ namespace TranslationsBuilder {
     }
 
     public void LoadModel() {
+
       var model = TranslationsManager.model;
 
       txtServer.Text = model.Server.ConnectionString;
@@ -30,14 +32,14 @@ namespace TranslationsBuilder {
       txtCompatibilityLevel.Text = model.Database.CompatibilityLevel.ToString();
       txtEstimatedSize.Text = (model.Database.EstimatedSize / 1000000).ToString("#.0") + " MB";
 
-      listSecondaryCultures.Items.AddRange(TranslationsManager.GetSecondaryCultureDisplayNamesInDataModel().ToArray());
+      listSecondaryCultures.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
 
-      listLanguageForTransation.Items.AddRange(TranslationsManager.GetSecondaryCulturesInDataModel().ToArray());
+      listLanguageForTransation.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
       if (listLanguageForTransation.Items.Count > 0) {
         listLanguageForTransation.SelectedIndex = 0;
       }
 
-      listCultureToPopulate.Items.AddRange(TranslationsManager.GetSecondaryCulturesInDataModel().ToArray());
+      listCultureToPopulate.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
       if (listCultureToPopulate.Items.Count > 0) {
         listCultureToPopulate.SelectedIndex = 0;
       }
@@ -72,6 +74,7 @@ namespace TranslationsBuilder {
 
       gridTranslations.AutoResizeColumns();
       gridTranslations.ClearSelection();
+      this.Refresh();
     }
 
     private void PopulateDefaultCultureTranslations(object sender, EventArgs e) {
@@ -82,40 +85,30 @@ namespace TranslationsBuilder {
     private void AddSecondaryCulture(object sender, EventArgs e) {
 
       using (FormAddCultureDialog dialog = new FormAddCultureDialog()) {
+        
         dialog.StartPosition = FormStartPosition.CenterParent;
         dialog.ShowDialog(this);
+
         if (dialog.DialogResult == DialogResult.OK) {
           string cultureName = dialog.getLanguage();
           TranslationsManager.model.Cultures.Add(new Culture { Name = dialog.getLanguage() });
           TranslationsManager.model.SaveChanges();
           listSecondaryCultures.Items.Clear();
-          listSecondaryCultures.Items.AddRange(TranslationsManager.GetSecondaryCulturesInDataModel().ToArray());
+          listSecondaryCultures.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
           PopulateGridWithTranslations();
 
+          string cultureFullNames = SupportedLanguages.AllLangauges[cultureName].FullName;
+
           listCultureToPopulate.Items.Clear();
-          listCultureToPopulate.Items.AddRange(TranslationsManager.GetSecondaryCulturesInDataModel().ToArray());
-          listCultureToPopulate.SelectedIndex = listCultureToPopulate.Items.IndexOf(cultureName);
+          listCultureToPopulate.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
+          listCultureToPopulate.SelectedIndex = listCultureToPopulate.Items.IndexOf(cultureFullNames);
 
           listLanguageForTransation.Items.Clear();
-          listLanguageForTransation.Items.AddRange(TranslationsManager.GetSecondaryCulturesInDataModel().ToArray());
-          listLanguageForTransation.SelectedIndex = listLanguageForTransation.Items.IndexOf(cultureName);
+          listLanguageForTransation.Items.AddRange(TranslationsManager.GetSecondaryCultureFullNamesInDataModel().ToArray());
+          listLanguageForTransation.SelectedIndex = listLanguageForTransation.Items.IndexOf(cultureFullNames);
 
         }
       }
-    }
-
-    private void GenenrateMachineTranslations(object sender, EventArgs e) {
-      Language targetLanguage = SupportedLanguages.AllLangauges[listCultureToPopulate.SelectedItem.ToString()];
-      string targetLanguageTag = targetLanguage.LanguageTag;
-
-      using (FormLoadingStatus dialog = new FormLoadingStatus()) {
-        dialog.StartPosition = FormStartPosition.CenterScreen;
-        dialog.Show(this);
-        TranslationsManager.PopulateCultureWithMachineTranslations(targetLanguageTag, dialog);
-        dialog.Close();
-      }
-
-      PopulateGridWithTranslations();
     }
 
     private void ExportTranslations(object sender, EventArgs e) {
@@ -130,34 +123,18 @@ namespace TranslationsBuilder {
       dialogOpenFile.RestoreDirectory = true;
 
       if (dialogOpenFile.ShowDialog() == DialogResult.OK) {
-        FileStream stream = File.Open(dialogOpenFile.FileName,FileMode.Open, FileAccess.Read);
-        StreamReader reader = new StreamReader(stream);        
-        var lines = reader.ReadToEnd().Trim().Split("\r\n");
-        var headers = lines[0].Split(",");
-        var targetLanguage = headers[3];
-        for (int lineNumber = 1; lineNumber <= lines.Length - 1; lineNumber++) {
-          var row = lines[lineNumber];
-          var rowValues = row.Split(",");
-          string objectType = rowValues[0];
-          string objectName = rowValues[1];
-          string translatedValue = rowValues[3];
-          TranslationsManager.SetDatasetObjectTranslation(objectType, objectName, targetLanguage, translatedValue);
-        }
+        TranslationsManager.ImportTranslations(dialogOpenFile.FileName);
+        LoadModel();
         PopulateGridWithTranslations();
       }
+
     }
 
     private void ExportTranslationsSheet(object sender, EventArgs e) {
-      Language targetLanguage = SupportedLanguages.AllLangauges[listLanguageForTransation.SelectedItem.ToString()];
-      string targetLanguageTag = targetLanguage.LanguageTag;
 
-      using (FormLoadingStatus dialog = new FormLoadingStatus()) {
-        dialog.StartPosition = FormStartPosition.CenterParent;
-        dialog.Show(this);
-        TranslationsManager.ExportTranslationsSheet(targetLanguageTag);
-        dialog.Close();
-      }
-      PopulateGridWithTranslations();
+      Language targetLanguage = SupportedLanguages.GetLanguageFromFullName(listLanguageForTransation.SelectedItem.ToString());
+      TranslationsManager.ExportTranslations(targetLanguage.LanguageTag);
+
     }
 
     private void ConfigureSettings(object sender, EventArgs e) {
@@ -190,5 +167,40 @@ namespace TranslationsBuilder {
         }
       }
     }
+
+    private void GenenrateMachineTranslations(object sender, EventArgs e) {
+
+      Language targetLanguage = SupportedLanguages.GetLanguageFromFullName(listCultureToPopulate.SelectedItem.ToString());
+      string targetLanguageTag = targetLanguage.LanguageTag;
+
+      using (FormLoadingStatus dialog = new FormLoadingStatus()) {
+        dialog.StartPosition = FormStartPosition.CenterScreen;
+        dialog.Show(this);
+        TranslationsManager.PopulateCultureWithMachineTranslations(targetLanguageTag, dialog);
+        dialog.Close();
+      }
+
+      PopulateGridWithTranslations();
+    }
+
+    private void GenenrateAllMachineTranslations(object sender, EventArgs e) {
+
+      using (FormLoadingStatus dialog = new FormLoadingStatus()) {
+
+        dialog.StartPosition = FormStartPosition.CenterScreen;
+        dialog.Show(this);
+
+        foreach (var language in TranslationsManager.GetSecondaryCulturesInDataModel()) {
+          TranslationsManager.PopulateCultureWithMachineTranslations(language, dialog);
+          PopulateGridWithTranslations();
+        }
+
+        dialog.Close();
+      }
+
+      PopulateGridWithTranslations();
+
+    }
+  
   }
 }
