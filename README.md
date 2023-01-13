@@ -1,7 +1,6 @@
-**Note**
-The contents of this repository have been enhanced and updated in January of 2023. If you are looking for the orginal version of content published in July 2021, you can find it [HERE](https://github.com/PowerBiDevCamp/Multilanguage-Reports/tree/version1-july2021). 
+**Warning**
+The contents of this repository were significantly enhanced and restructured early in 2023 to provide the latest Microsoft guidance and best practices. If you are looking for the contents of this repository from the original version  published in July 2021, you can find it **[HERE](https://github.com/PowerBiDevCamp/Multilanguage-Reports/tree/version1-july2021)**. 
 
-<hr/>
 
 # Building Multi-language Reports in Power BI
 
